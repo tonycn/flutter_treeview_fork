@@ -34,6 +34,8 @@ class TreeViewTheme {
   /// The text style for parent [TreeNode] text.
   final TextStyle parentLabelStyle;
 
+  final double iconSpaceWidth;
+
   const TreeViewTheme({
     this.colorScheme: const ColorScheme.light(),
     this.iconTheme: const IconThemeData.fallback(),
@@ -42,6 +44,7 @@ class TreeViewTheme {
     this.parentLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
     this.levelPadding: _kDefaultLevelPadding,
     this.dense: true,
+    this.iconSpaceWidth = 10
   });
 
   /// Creates a [TreeView] theme with some reasonable default values.
@@ -59,6 +62,7 @@ class TreeViewTheme {
         labelStyle = const TextStyle(),
         parentLabelStyle = const TextStyle(fontWeight: FontWeight.bold),
         dense = true,
+        iconSpaceWidth = 10,
         levelPadding = _kDefaultLevelPadding;
 
   /// Creates a copy of this theme but with the given fields replaced with

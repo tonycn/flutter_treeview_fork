@@ -132,7 +132,7 @@ class _TreeNodeState extends State<TreeNode>
     assert(_treeView != null, 'TreeView must exist in context');
     TreeViewTheme _theme = _treeView.theme;
     return Container(
-      width: widget.node.hasIcon ? _kIconSize : 10,
+      width: widget.node.hasIcon ? _kIconSize : (_theme.iconSpaceWidth ?? 10),
       child: widget.node.hasIcon
           ? Icon(
               widget.node.icon.icon,
